@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Right_arrow from "../icons/Right_arrow";
 import Shopping_cart from "../icons/Shopping_cart";
 
@@ -5,7 +6,7 @@ export default function Hero() {
     return(
         <section className="hero">
             <div className="py-12">
-                <h1 className="text-4x1 font-semibold">
+                <h1 className="text-4xl font-semibold">
                     Everything<br />
                     is better<br />
                     with a&nbsp;
@@ -27,6 +28,10 @@ export default function Hero() {
                     </button>
                 </div>
             </div>
-        </section>
+            <div className="relative">
+                <Image src={'/hero-pizza.png'} layout={'fill'} objectFit={'contain'} alt={'pizza'} />
+            </div>
+        </section> 
+
     );
 }
